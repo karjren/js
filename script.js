@@ -12,7 +12,10 @@ function MapLoad() {
         e.style.display = "none"
     })
 }
-
+var isHomePage = document.querySelector(".home-page");
+if (isHomePage) {
+    MapLoad();
+} 	
 let currentIndex = 0;
 const slider = document.getElementById("slider");
 const slides = document.querySelectorAll(".slide");
