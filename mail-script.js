@@ -10,7 +10,7 @@ jQuery(document).ready(function($) {
       data: {
         action: 'send_contact_form',
         name: $('#name').val(),
-        email: $('#email').val(),
+        c_email: $('#c_email').val(),
         message: $('#message').val()
       },
       success: function(response) {
