@@ -4,6 +4,7 @@ jQuery(document).ready(function($) {
 	var load = document.getElementById("form-loading-wrapper");
     load.style.display = "flex";
     event.preventDefault();  
+	 
     $.ajax({
       type: 'POST',
       url: myAjax.ajaxurl,
@@ -11,7 +12,8 @@ jQuery(document).ready(function($) {
         action: 'send_contact_form',
         name: $('#name').val(),
         c_email: $('#c_email').val(),
-        message: $('#message').val()
+        message: $('#message').val(),
+		sp: $('#sp').val()
       },
       success: function(response) {
 		spin.style.display = "none";
@@ -40,7 +42,8 @@ jQuery(document).ready(function($) {
 		deltime: $('#deltime').val(),
         return: $('#return').val(),
 		retdate: $('#retdate').val(),
-        rettime: $('#rettime').val()
+        rettime: $('#rettime').val(),
+		sph: $('#sph').val()
       },
       success: function(response) {
 		spin.style.display = "none";
